@@ -1,0 +1,39 @@
+6             #number of buckets (nr)
+2             #number of CVs (ncv)
+1 1           #torsion or not (iwrap)
+1 1           #CVs where metabiases are acting
+1             #CV where bucket is acting
+300.0  300.0  #T_physical and T_extended_variable 
+20            #bias factor
+W1                     #folder for bucket 1 
+  -3.1   -2.00    0.1  #grid definition for each buckets (grid_min,grid_max,ngrid)
+  -3.1    3.1     0.1  #grid definition along other CVs
+   1       -1          #t_min, and t_max (if t_max <0, then it t_max is set same as that of the COLVAR file)
+   10      500         #w_cv and w_hill (frequency at which COLVAR files are written & frequency of metabiases update)
+W2 
+  -2.00   -1.00    0.1
+  -3.10    3.10    0.1  #grid definition along other CVs
+   1       -1          #t_min, and t_max (if t_max <0, then it t_max is set same as that of the COLVAR file)
+   10      500         #w_cv and w_hill (frequency at which COLVAR files are written & frequency of metabiases update)
+W3 
+  -1.00    0.00    0.1
+  -3.10    3.10    0.1  #grid definition along other CVs
+   1       -1          #t_min, and t_max (if t_max <0, then it t_max is set same as that of the COLVAR file)
+   10      500         #w_cv and w_hill (frequency at which COLVAR files are written & frequency of metabiases update)
+W4  
+   0.00    1.00    0.1
+  -3.10    3.10    0.1  #grid definition along other CVs
+   1       -1          #t_min, and t_max (if t_max <0, then it t_max is set same as that of the COLVAR file)
+   10      500         #w_cv and w_hill (frequency at which COLVAR files are written & frequency of metabiases update)
+W5  
+   1.00    2.00    0.1
+  -3.10    3.10    0.1  #grid definition along other CVs
+   1       -1          #t_min, and t_max (if t_max <0, then it t_max is set same as that of the COLVAR file)
+   10      500         #w_cv and w_hill (frequency at which COLVAR files are written & frequency of metabiases update)
+W6 
+   2.00    3.10    0.1
+  -3.10    3.10    0.1  #grid definition along other CVs
+   1       -1          #t_min, and t_max (if t_max <0, then it t_max is set same as that of the COLVAR file)
+   10      500         #w_cv and w_hill (frequency at which COLVAR files are written & frequency of metabiases update)
+PRINT2D  
+  2 -3.10    3.10   0.1  #grid definition along CV other than the bucket CV
